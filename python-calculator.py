@@ -1,21 +1,18 @@
+first_num = input("Enter the first number:  ")
 
-first_num = input("Enter the first number")
+second_num = input("Enter the second number:  ")
 
-print(int(first_num))
+print("\n")
 
-second_num = input("Enter the second number")
+print("+ \n \n - \n \n * \n \n / \n")
 
-print(int(second_num))
-
-operator = input("Choose an operator")
-
-print("+ \n \n - \n \n * \n \n %")
+operator = input("Enter an operator from the list above:  ")
 
 if operator == "+":
-  print(first_num + second_num)
+  print(int(first_num) + int(second_num))
 elif operator == "-":
-  print(first_num - second_num)
+  print(int(first_num) - int(second_num))
 elif operator == "*":
-  print(first_num * second_num)
+  print(int(first_num) * int(second_num))
 else:
-  print(first_num % second_num)
+  print(int(first_num) / int(second_num))
