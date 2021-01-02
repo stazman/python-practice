@@ -1,16 +1,3 @@
-if 5<10:
- print("Hello World!")
- print("Hello again")
-
-x = "hello"
-y = "world"
-
-x = "Goodbye"
-
-print(x)
-print(y)
-
-
 #This is a single-line comment. Python doesn't have multi-line comments per se,
 # but you can use a multi-line string (three quotation marks before and after comment)
 
@@ -68,12 +55,36 @@ g = float(f)
 
 print(g)
 
+
+# No random function like Math.random() in JavaScript
+
 import random
 
 print(random.randrange(1, 10))
 
 
+# Global Variables with global keyword (different than JavaScript)
 
+# The local_var function is invoked  
+
+foo = "Constantinople"
+
+def local_var():
+  foo = "Istanbul"
+  print(foo)
+
+local_var()
+
+print(foo)
+
+
+def global_var():
+  global foo
+  foo = "Istanbul"
+
+global_var()
+
+print(foo)
 
 
 
