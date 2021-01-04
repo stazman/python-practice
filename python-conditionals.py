@@ -20,7 +20,7 @@ def pet(result):
 pet("dog")
 
 
-# short form -- all in one line if there's only one conditional statement 
+# short form -- all in one line if there's only one conditional statement
 
 if 4>3: print("The first number is larger")
 
@@ -59,37 +59,3 @@ if 3>2:
   pass
 
 # if 3>2: --> causes error and program does not run
-
-
-# Looping/Iteration:
-
-# while
-
-x = 1
-
-y = 0
-
-z = 0
-
-while x<12:
-  print(x)
-  x+=1
-  if x == 5:
-    continue
-  print(x)
-  
-while y<12:
-  print(y)  
-  y+=1
-  if y == 7:
-    break
-
-while z<12:
-  print(z)
-  z+=1
-else:
-  print("z is no longer smaller than 12")
-  
-
-# there's no for statement ... use for...in in Python for simple looping (but the for...in in JavaScript is specifically for iterating through objects (to expose keys))
-
