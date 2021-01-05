@@ -87,3 +87,12 @@ const a = "My age is " + 34;
 console.log(a); 
 """
 
+while x<12:
+  # print(x)
+  x+=1
+  if x == 5:
+    continue
+  print(x)
+  # if x == 11:
+  #   break
+  
