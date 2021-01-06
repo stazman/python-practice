@@ -115,5 +115,45 @@ print(l3)
 
 # sort()
 
+# syntax: list.sort(reverse=True|False, key=myFunc)
+
+ab = [5, "happy", "merry", "glad", 3]
+
+for item in ab:
+  if type(item) != type("string"):
+    ab.remove(item)
+    print("not a string")
+  else:
+    print("test")
+    
+print(ab)
+
+# default sort in ascending order
+
+ab.sort()
+
+print(ab)
+
+
+# sort in descending order
+
+ab.sort(reverse=True)
+
+print(ab)
+
+# sort by "keys" representing what functions return:
+
+# sort by length
+
+
+
+# sort by whether or not the string in a list item includes a letter 
+
+
+
+# sort dictionary by key values --- eg., ages
+
+
+
 
 
