@@ -1,5 +1,7 @@
 # Exception handling in Python; its very similar to JS
 
+# keywords: try, except (like catch in JS), raise (like throw in JS), finally
+
 try:
   number = int(input("Enter a number: "))
   print(number)
@@ -21,3 +23,11 @@ except ValueError as err:
 except ZeroDivisionError as err2:
   print("A number cannot be divided by zero")
   print(err2)
+
+x = "hello"
+
+if not type(x) is int:
+  raise TypeError("You must enter a number")
+else:
+  print(x)
+
