@@ -30,11 +30,11 @@ set()
 
 # Since lists are indexed, lists can have items with the same value
 
-# You can use the literal or list constructor to create a list. Note the double round brackets in hte constructor:
+# You can use the literal or list constructor to create a list. Note the double round brackets in the constructor:
 
-l = [1,2,3,4]
+l = [1,2,3,4] # literal
 
-l2 = list(('cat', 3, True, None, True))
+l2 = list(('cat', 3, True, None, True)) # constructor
 
 for item in l:
   print(item)
@@ -49,16 +49,18 @@ print(l2[0])
 
 print(l2[-1])
 
-print(l2[0:2]) # not inclusive of 2
+print(l2[0:2]) # not inclusive of item at index 2
 
-print(l2[2:]) # not inclusive of 2
+print(l2[2:]) # inclusive of item at index 2
 
-print(l2[:2]) # not inclusive of 2
+print(l2[:2]) # not inclusive of item at index 2
 
 
 #Tuples
 
 # A tuple is similar to an enum in Java. It is unchangeable.
+
+
 
 
 
