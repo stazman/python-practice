@@ -9,8 +9,10 @@
 # extend()	Add the elements of a list (or any iterable), to the end of the current list
 # index()	Returns the index of the first element with the specified value ... like indexOf() in JS
 # insert()	Adds an element at the specified position
-# pop()	Removes the element at the specified position
+# pop()	Removes the element at end without a parameter or at the specified position with a parameter (whether in the middle of the list or not)
+  # pop() in Python is much more versatile than the pop() in JavaScript
 # remove()	Removes the item with the specified value
+  # pop() and remove() both mutate the array (i.e. are destructive), but only pop() returns the popped off item
 # reverse()	Reverses the order of the list
 # sort()	Sorts the list
 
@@ -45,8 +47,18 @@ print(a)
 
 # unlike JS, you can remove items in the middle of a list
 
+# removing items from a list by type:
 
+ab = [5, "happy", "merry", "hyperecstatic", "glad", 3]
 
+for item in ab:
+  if type(item) != type("string"):
+    ab.remove(item)
+    print("not a string")
+  else:
+    print("test")
+    
+print(ab)
 
 
 # pop()
@@ -55,7 +67,9 @@ print(a)
 
 l1 = [1, 2, 3, 4, "five"]
 
-print(l1.pop())
+print(l1.pop()) 
+
+print(l1)
 
 print(l1.pop(1))
 
@@ -90,16 +104,17 @@ l3.extend(l6)
 
 print(l3)
 
-l7 = {"name": 'Jen', "city": "Toledo"} #extending a dictionary
+l7 = {"name": 'Jen', "city": "Toledo"} 
 
 print(type(l7))
 
-l3.extend(l7)
+l3.extend(l7) #extending a dictionary; note that only the keys, not the values, were added to the list
 
 print(l3)
 # just prints the keys, not values for dictionary
-
 l8 = [{"name": 'Jen', "city": "Toledo"}] 
+
+print(type(l8))
 
 l3.extend(l8)
 
@@ -117,16 +132,6 @@ print(l3)
 
 # syntax: list.sort(reverse=True|False, key=myFunc)
 
-ab = [5, "happy", "merry", "glad", 3]
-
-for item in ab:
-  if type(item) != type("string"):
-    ab.remove(item)
-    print("not a string")
-  else:
-    print("test")
-    
-print(ab)
 
 # default sort in ascending order
 
@@ -145,15 +150,32 @@ print(ab)
 
 # sort by length
 
+# function where criteria for sorting are set and each item is passed through as a parameter to the function and the return criterion
 
+def myFunc(e):
+  return len(e)
 
-# sort by whether or not the string in a list item includes a letter 
+ab.sort(reverse=False, key=myFunc)
 
+print(ab)
 
+def lenFunc(e):
+  return len(e)
 
-# sort dictionary by key values --- eg., ages
+ab.sort(reverse=True, key=lenFunc)
 
+print(ab)
 
+def letterFunc(e):
+  return
 
+# Review and practice: Make a key function with these built-in Python functions:
 
-
+""" 
+abs()
+hash()
+ord()
+oct()
+pow()
+round()
+"""
