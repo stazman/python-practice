@@ -13,6 +13,7 @@
   # pop() in Python is much more versatile than the pop() in JavaScript
 # remove()	Removes the item with the specified value
   # pop() and remove() both mutate the array (i.e. are destructive), but only pop() returns the popped off item
+  # JS doesn't have an equivalent
 # reverse()	Reverses the order of the list
 # sort()	Sorts the list
 
@@ -108,11 +109,13 @@ l7 = {"name": 'Jen', "city": "Toledo"}
 
 print(type(l7))
 
-l3.extend(l7) #extending a dictionary; note that only the keys, not the values, were added to the list
+l3.extend(l7) #extending a dictionary; note that only the keys, not the values, were added to the list unless the objects are in a list
 
 print(l3)
-# just prints the keys, not values for dictionary
+# Above just prints the keys, not values for dictionary
+
 l8 = [{"name": 'Jen', "city": "Toledo"}] 
+
 
 print(type(l8))
 
