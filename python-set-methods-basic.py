@@ -63,7 +63,7 @@ petset.update(neighbor1)
 print(petset)
 
 
-# Array of dictionaries causes error:  
+# Array of dictionaries causes error:
 # neighbors = [{ "name": "Chris Sharpe", "age": 48 }, { "name": "Kelly Sharpe", "age": 44}]
 
 # petset.update(neighbors)
@@ -101,7 +101,7 @@ print(petset.discard("Mephistopheles"))
 print(petset)
 
 
-# You can also use the pop(), method to remove an item, but this method will remove only the last item. 
+# You can also use the pop(), method to remove an item, but this method will remove only the last item.
 
 # Important! Remember that sets are unordered, so you will not know what item that gets removed.
 
@@ -116,7 +116,7 @@ print(petset)
 
 print(petset.clear())
 
-print(petset)
+print(petset) # petset has been emptied, so printing petset results in an empty set
 
 
 # The del keyword deletes the set entirely

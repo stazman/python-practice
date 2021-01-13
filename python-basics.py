@@ -1,4 +1,6 @@
-#Debugging in Python: put this code where you want to set a breakpoint for the debugging. You would put it in the same place you would put debugger in Chrome Dev Console for JS: 
+# The return value of a method invocation that results in mutating a data structure is None
+
+#Debugging in Python: put this code where you want to set a breakpoint for the debugging. You would put it in the same place you would put debugger in Chrome Dev Console for JS:
 
       # import pdb; pdb.set_trace()
 
@@ -34,7 +36,7 @@ print(y)
 print(z)
 
 #display the data type of x:
-print(type(x)) 
+print(type(x))
 
 
 # Casting
@@ -71,7 +73,7 @@ print(random.randrange(1, 10))
 
 # Global Variables with global keyword (different than JavaScript)
 
-# The local_var function is invoked  
+# The local_var function is invoked
 
 foo = "Constantinople"
 
@@ -91,6 +93,3 @@ def global_var():
 global_var()
 
 print(foo)
-
-
-
