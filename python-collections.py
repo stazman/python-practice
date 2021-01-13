@@ -64,7 +64,7 @@ print(l2[0:2]) # not inclusive of item at index 2 (range including starting poin
 
 print(l2[2:]) # inclusive of item at index 2 (including the first element and all elements to to the end of the list)
 
-print(l2[:2]) # not inclusive of item at index 2 (rang including the element at index 0 to and not inclusive of the listed index number) 
+print(l2[:2]) # not inclusive of item at index 2 (rang including the element at index 0 to and not inclusive of the listed index number)
 
 # Remember: starting at number includes number; up to number doesn't
 
@@ -138,7 +138,7 @@ aa2 = tuple(aa)
 
 # unpacking a tuple ... breaking out a data structure into multiple variables for the structure's variables to be assigned to:
 
-  # unpacking is an example of decomposition 
+  # unpacking is an example of decomposition
 
 (french_1, french_2, french_3) = aa2
 
@@ -165,29 +165,107 @@ print(hedgehog)
 
 # Sets are immutable and they do not allow duplicates
 
-s = { "one", "two", 3, False, () }
+s = { "one", "two", 3, False, "duplicate", ()}
+
+s2 = { "a", "b", None, 2.3, "duplicate"}
+
+
+# Cannot include {} or [] in a set literal because lists and dicts aren't hashable (and will get related error if try to)
 
 print(len(s))
 
+
 # You cannot access items in a set by referring to an index or a key.
 
-# But you can loop through the set items using a for loop, or ask if a specified value is present in a set, by using the in keyword.
+
+# But you can loop through the set items using a for loop, or ask if a specified value is present in a set, by using the in keyword:
 
 
 
 # ---- Looping through sets ----
 
+for i in s:
+  print(i)
 
+
+for i in s2:
+  print(i)
 
 
 
 # ---- Joining sets ----
 
+# Two ways to join sets:
+
+# union() ---> creates a new set; does not mutate the sets to be joined
+# update() ---> mutates the first set by adding the items in the new set to it
+
+
+newS = s.union(s2)
+print(s.union(s2))
+print(newS)
+print(s)
+print(s2)
+
+mutatedS = s.update(s2)
+print(s.update(s2))
+print(mutatedS)
+print(s)
+print(s2)
+
+# intersection() and intersection_update() both include the duplicates in the resulting set (returned itself with intersection() but None returned with intersection_update)
+# "Only what intersects (matches) between the two sets"
+
+# Such as with union() and update(), intersection() makes a new set but intersection_update() mutates the original set so that only the duplicate members are included in the original set:
+
+# intersection()
+
+# "A safe way to find the unique values in two sets to be joined"
+
+notMutatedIntersectedSet = { "one", "two", 3, False, "duplicate", ()}
+notMutatedIntersectedSet2 = { "a", "b", None, 2.3, "duplicate"}
+
+notMutated = notMutatedIntersectedSet.intersection(notMutatedIntersectedSet2)
+print(notMutated)
+print(notMutatedIntersectedSet) # Shows original first set unchanged
+
+
+# intersection_update()
+
+mutatedIntersectedUpdatedSet = { "one", "two", 3, False, "duplicate", ()}
+mutatedIntersectedUpdatedSet2 = { "a", "b", None, 2.3, "duplicate"}
+
+mutated = mutatedIntersectedUpdatedSet.intersection_update(mutatedIntersectedUpdatedSet2)
+print(mutated)
+print(mutatedIntersectedUpdatedSet) # Shows original first set changed
 
 
 
+# symmetric_difference(): mutates the first array to include all EXCEPT the duplicates
+
+# "keep only what is unique between the two sets and returns this in a new set"
 
 
+notMutatedUniqueItemsOnly = { "one", "two", 3, False, "duplicate", ()}
+
+notMutatedUniqueItemsOnly_2 = { "a", "b", None, 2.3, "duplicate"}
+
+notMutatedUnique = notMutatedUniqueItemsOnly.symmetric_difference(notMutatedUniqueItemsOnly_2)
+print(notMutatedUnique)
+print(notMutatedUniqueItemsOnly) # Shows original first set unchanged
+
+
+# symmetric_difference_update(): mutates the first array to include all EXCEPT the duplicates
+
+# "keep only what is unique in the two sets but just change the first set to do so, without returning a new set"
+
+mutatedUniqueItemsOnly = { "one", "two", 3, False, "duplicate", ()}
+
+mutatedUniqueItemsOnly_2 = { "a", "b", None, 2.3, "duplicate"}
+
+mutatedUnique = mutatedUniqueItemsOnly.symmetric_difference_update(mutatedUniqueItemsOnly_2)
+print(mutatedUnique)
+print(mutatedUniqueItemsOnly) # Shows original first set changed
 
 
 #Dictionaries
