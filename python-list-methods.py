@@ -13,7 +13,7 @@
   # pop() in Python is much more versatile than the pop() in JavaScript
 # remove()	Removes the item with the specified value
   # pop() and remove() both mutate the array (i.e. are destructive), but only pop() returns the popped off item
-  # JS doesn't have an equivalent
+  # JS doesn't have an equivalent for pop() with a specified value
 # reverse()	Reverses the order of the list
 # sort()	Sorts the list
 
@@ -58,7 +58,7 @@ for item in ab:
     print("not a string")
   else:
     print("test")
-    
+
 print(ab)
 
 
@@ -68,7 +68,7 @@ print(ab)
 
 l1 = [1, 2, 3, 4, "five"]
 
-print(l1.pop()) 
+print(l1.pop())
 
 print(l1)
 
@@ -105,7 +105,7 @@ l3.extend(l6)
 
 print(l3)
 
-l7 = {"name": 'Jen', "city": "Toledo"} 
+l7 = {"name": 'Jen', "city": "Toledo"}
 
 print(type(l7))
 
@@ -114,7 +114,7 @@ l3.extend(l7) #extending a dictionary; note that only the keys, not the values, 
 print(l3)
 # Above just prints the keys, not values for dictionary
 
-l8 = [{"name": 'Jen', "city": "Toledo"}] 
+l8 = [{"name": 'Jen', "city": "Toledo"}]
 
 
 print(type(l8))
@@ -155,6 +155,7 @@ print(ab)
 
 # function where criteria for sorting are set and each item is passed through as a parameter to the function and the return criterion
 
+
 def myFunc(e):
   return len(e)
 
@@ -165,20 +166,8 @@ print(ab)
 def lenFunc(e):
   return len(e)
 
-ab.sort(reverse=True, key=lenFunc)
+ab.sort(reverse=True, key=lenFunc) # The key function in the second parameter for sort passes each list item to determine the order based on how each item is evaluated inside the key function
+
+# Note: if reverse is false, you only need the parameter for the key to use the key function; it is not necessary to have both parameters explicitly. eg., ab.sort(key=lenFunc)
 
 print(ab)
-
-def letterFunc(e):
-  return
-
-# Review and practice: Make a key function with these built-in Python functions:
-
-""" 
-abs()
-hash()
-ord()
-oct()
-pow()
-round()
-"""
