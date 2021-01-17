@@ -44,7 +44,7 @@ john = {
 print(john)
 
 
-# fromkeys(); like Object.assign() in JS but all values must be the same; prints out object with keys and given values
+# fromkeys(); like Object.assign() in JS except all values must be the same; prints out object with keys and given values
 
 keys = ("key1", "key2", "key3")
 val = "This is a value."
@@ -145,4 +145,12 @@ car.pop("year")
 print(car)
 
 car.popitem()
+print(car)
+
+# del can work like pop() for one key/value pair or it can delete the whole dictionary
+
+del car["brand"]
+print(car)
+
+del car
 print(car)

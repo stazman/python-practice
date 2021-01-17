@@ -163,7 +163,10 @@ print(hedgehog)
 
 # A set is a collection which is both unordered and unindexed.
 
-# Sets are immutable and they do not allow duplicates
+# Sets do not allow duplicates
+
+# Sets are mutable. However, since they are unordered, indexing has no meaning. We cannot access or change an element of a set using indexing or slicing. Set data type does not support it.
+
 
 s = { "one", "two", 3, False, "duplicate", ()}
 
@@ -278,6 +281,7 @@ thisdict = {
   "year": 1964,
   "year": 2020
 }
+
 print(thisdict)
 
 # Dictionaries are unordered, so you cannot refer to an item by using an index.
@@ -298,29 +302,35 @@ print(john["email"])
 print(len(john))
 
 
-# List of dictionaries example:
-
-employeeinfo = [
-  { "id": 1,
-    "name": "John",
-    "email": "john@here.com",
-    "status": "admin"
-  },
-  { "id": 2,
-    "name": "Fred",
-    "email": "fred@here.com",
-    "status": "employee"
-  },
-  { "id": 3,
-    "name": "Sal",
-    "email": "sal@here.com",
-    "status": "manager"
-  },
-]
-
-# iterating over dictionaries
+# looping over dictionaries
 
 a_dict = {'color': 'blue', 'fruit': 'apple', 'pet': 'dog'}
+
+
+# using basic looping to access keys
+
+for item in a_dict:
+  print(item)
+
+# using keys() to access keys
+
+for item in a_dict.keys():
+  print(item)
+
+
+# using basic looping to access values
+
+for item in a_dict:
+  print(a_dict[item])
+
+# using values() to access values
+
+for item in a_dict.values():
+  print(item)
+
+
+# using items() ---> makes tuples
+
 d_items = a_dict.items()
 print(d_items)
 
@@ -333,37 +343,78 @@ for item in a_dict.items():
 for item in a_dict.items():
  print(item[0][0])
 
- pet1 = {'name': 'Cash', 'species': 'canine', 'age': 2 }
 
- print(pet1.items())
+# copying a dictionary
 
-pet_keys = pet1.keys()
+# You cannot copy a dictionary simply by typing a_dict = b_dict, because b_dict will only be a reference to a_dict, and changes made in b_dict will automatically also be made in a_dict.
 
-print(pet_keys)
+b_dict = {}
 
-# keys() and values() work differently here than in JS, which doesn't call these methods on variables assigned objects but passes objects through built in Object.keys() and Object.values() methods
+a_dict = b_dict
 
-incomes = {'apple': 5600.00, 'orange': 3500.00, 'banana': 5000.00}
-total_income = 0.00
-for value in incomes.values():
-    total_income += value
+print(a_dict)
 
-print(total_income)
+print(b_dict)
 
 
-# There are two ways to mutate existing items in a dictionary: bracket notation and the update() method:
+# In addition to the copy() method, you can use the built-in constructor function dict()
 
-incomes["apple"] = 3000.00
+john2 = dict(john)
 
-incomes.update({"orange": 90000.00})
-
-print(incomes)
+print(john2)
 
 
-# Also use update() to add an item that doesn't exist
+# All collections can be copied using their built-in constructors:
+
+print(l2)
+print(b)
+print(newS)
+print(thisdict)
+
+newl2 = list(l2)
+print(newl2)
+
+new_b = tuple(b)
+print(new_b)
+
+newnewS = set(newS)
+print(newnewS)
+
+newthisdict = dict(thisdict)
+print(newthisdict)
 
 
-incomes.update({"grapes": 3444.99})
+# nested dictionaries
 
-print(incomes)
+SWfamily = {
+  'familymember1': {
+    'name': 'Anakin',
+    'relation': 'father'
+  },
+  'familymember2': {
+    'name': 'Luke',
+    'relation': 'son'
+  },
+  'familymember3': {
+    'name': 'Leia',
+    'relation': 'daughter'
+  }
+}
 
+pet1 = {
+  "name": "Cash",
+  "species": "dog",
+  "age": 2
+}
+
+pet2 = {
+  "name": "Carter",
+  "species": "dog",
+  "age": 2}
+
+mypets = {
+  "pet1": pet1,
+  "pet2": pet2
+}
+
+print(mypets)
