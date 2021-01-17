@@ -78,18 +78,99 @@
 # Task: Need to make a list of kinds of pets not allowed in apartments
 
 
-t1 = tuple({"dog", "cat", "bird"})
-message = ""
+# t1 = tuple({"dog", "cat", "bird"})
+# message = ""
 
-def petform():
-  petkind = input("What kind of pet do you have? ")
-  print("Your pet is a " + petkind)
-  for p in t1:
-    if petkind.lower() == p:
-      message = "This kind of pet is not allowed."
-      break
-    else:
-      message = "This kind of pet is allowed."
-  print(message)
+# def petform():
+#   petkind = input("What kind of pet do you have? ")
+#   print("Your pet is a " + petkind)
+#   for p in t1:
+#     if petkind.lower() == p:
+#       message = "This kind of pet is not allowed."
+#       break
+#     else:
+#       message = "This kind of pet is allowed."
 
-petform()
+#   print(message)
+
+# petform()
+
+# combining two tuples ... casting necessary
+
+# t3 = { "Name", "Birthday", "Phone", "Email" }
+# t4 = { "Address", "Social Media Link" }
+
+# # def tuplecomb(t, t2):
+# #   makelist = list(t)
+# #   makelist2 = list(t2)
+# #   makelist.extend(makelist2)
+# #   backtotuple = tuple(makelist)
+# #   print(backtotuple)
+
+# # tuplecomb(t3, t4)
+
+
+# def tuplecomb(t, t2):
+# # Note: Python will consider a list to be a set even if you cast it unless you assign the casting to a variable and use it to do the extending.
+#   list(t)
+#   list(t2)
+#   t.extend(t2)
+#   backtotuple = tuple(t)
+#   print(backtotuple)
+
+# tuplecomb(t3, t4)
+
+
+# Set
+
+# Use case: order not important but not be changeable nor allow duplicates
+# Make an email mailing list from a dictionary of accountholders
+
+
+employeeinfo = [
+  { "id": 1,
+    "name": "John",
+    "email": "john@here.com",
+    "status": "admin"
+  },
+  { "id": 2,
+    "name": "Fred",
+    "email": "fred@here.com",
+    "status": "employee"
+  },
+  { "id": 3,
+    "name": "Sal",
+    "email": "sal@here.com",
+    "status": "manager"
+  },
+]
+
+emailset = set()
+
+# def populateset(s):
+#   for obj in populateset:
+#     for key in obj:
+#       if key == "email":
+#         emailset.add(key.value())
+# print(emailset)
+
+# populateset(employeeinfo)
+
+
+# Error: TypeError: 'function' object is not iterable
+
+# But remember: using items() on a dictionary results in tuples, which are iterable
+
+def populateset(s):
+
+  for obj in s:
+    emailset.add(obj.setdefault("email"))
+
+    # setdefault() returns the value of a given key, and when used with a loop or iteration, it can return the values of all objects in an array based on a given key
+
+  print(emailset)
+
+populateset(employeeinfo)
+
+
+# Task: Handle the error that comes when a duplicate item is added to a set
