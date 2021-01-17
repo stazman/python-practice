@@ -6,8 +6,12 @@
 
       # https://codeburst.io/how-i-use-python-debugger-to-fix-code-279f11f75866#:~:text=Python%20has%20a%20built%2Din,that%20does%20the%20main%20job.&text=As%20soon%20as%20the%20interpreter,but%20with%20some%20new%20commands
 
+
+# A semi-colon in Python denotes separation, rather than termination, as in JS and Java. It allows you to write multiple statements on the same line. This syntax also makes it legal to put a semicolon at the end of a single statement. However, they are largely unnecessary.
+
 #This is a single-line comment. Python doesn't have multi-line comments per se,
 # but you can use a multi-line string (three quotation marks before and after comment)
+
 
 """
 This is a comment
@@ -27,9 +31,10 @@ print(x)
 
 #Are all variables always in global scope?
 
-#x = bool(0)
+x = bool(0)
 y = bool("")
 z = bool(False)
+
 #display x:
 print(x)
 print(y)
@@ -71,9 +76,10 @@ import random
 print(random.randrange(1, 10))
 
 
-# Global Variables with global keyword (different than JavaScript)
+# Global Variables with global keyword (different than JavaScript): the global keyword makes the variable of its parameter have global scope from within the function though a variable declared inside a function usually has only local scope
 
-# The local_var function is invoked
+# Without the global keyword, the local variable is ignored when the function is invoked
+
 
 foo = "Constantinople"
 
@@ -86,9 +92,12 @@ local_var()
 print(foo)
 
 
+# With the global keyword, the same local variable is allowed to have global scope. This is used to change the value of a global variable from within a function's local scope.
+
 def global_var():
   global foo
   foo = "Istanbul"
+  print(foo)
 
 global_var()
 

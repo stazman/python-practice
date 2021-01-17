@@ -269,3 +269,85 @@ print(mutatedUniqueItemsOnly) # Shows original first set changed
 
 
 #Dictionaries
+
+# As with JS objects and Java maps, dictionary items are unordered and unchangeable, and no duplicates are allowed.
+
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964,
+  "year": 2020
+}
+print(thisdict)
+
+# Dictionaries are unordered, so you cannot refer to an item by using an index.
+
+# However, you can access an object key's value/s thus:
+
+
+john = {
+  "id": 1,
+  "name": "John",
+  "email": "john@here.com",
+  "status": "admin"
+}
+
+print(john["email"])
+
+
+print(len(john))
+
+
+# List of dictionaries example:
+
+employeeinfo = [
+  { "id": 1,
+    "name": "John",
+    "email": "john@here.com",
+    "status": "admin"
+  },
+  { "id": 2,
+    "name": "Fred",
+    "email": "fred@here.com",
+    "status": "employee"
+  },
+  { "id": 3,
+    "name": "Sal",
+    "email": "sal@here.com",
+    "status": "manager"
+  },
+]
+
+# iterating over dictionaries
+
+a_dict = {'color': 'blue', 'fruit': 'apple', 'pet': 'dog'}
+d_items = a_dict.items()
+print(d_items)
+
+for item in a_dict.items():
+ print(item[0])
+
+for item in a_dict.items():
+ print(item[1])
+
+for item in a_dict.items():
+ print(item[0][0])
+
+ pet1 = {'name': 'Cash', 'species': 'canine', 'age': 2 }
+
+ print(pet1.items())
+
+pet_keys = pet1.keys()
+
+print(pet_keys)
+
+# keys() and values() work differently here than in JS, which doesn't call these methods on variables assigned objects but passes objects through built in Object.keys() and Object.values() methods
+
+incomes = {'apple': 5600.00, 'orange': 3500.00, 'banana': 5000.00}
+total_income = 0.00
+for value in incomes.values():
+    total_income += value
+
+print(total_income)
+
+
