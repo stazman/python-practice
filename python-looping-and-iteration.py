@@ -104,7 +104,7 @@ for item in a_dict.items():
  print(item[1])
 
 for item in a_dict.items():
- print(item[0][0]) 
+ print(item[0][0])
 
  pet1 = {'name': 'Cash', 'species': 'canine', 'age': 2 }
 
@@ -124,10 +124,24 @@ for value in incomes.values():
 print(total_income)
 
 
-# iterating over sets
+# Checking if a key exists in a dictionary:
+
+def checkifkeyexists(i):
+  if i in incomes:
+    print(f'The key {i} exists in this dictionary')
+    incomes[i] = "amount to be determined"
+    print(incomes)
+  else:
+    print(f'The key {i} does not exist in this dictionary')
+
+checkifkeyexists("banana")
+
+checkifkeyexists("kumquat")
 
 
 
-# iterating over tuples
+# iterating over sets practice ???
 
 
+
+# iterating over tuples practice ???

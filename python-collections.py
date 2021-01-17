@@ -351,3 +351,19 @@ for value in incomes.values():
 print(total_income)
 
 
+# There are two ways to mutate existing items in a dictionary: bracket notation and the update() method:
+
+incomes["apple"] = 3000.00
+
+incomes.update({"orange": 90000.00})
+
+print(incomes)
+
+
+# Also use update() to add an item that doesn't exist
+
+
+incomes.update({"grapes": 3444.99})
+
+print(incomes)
+
