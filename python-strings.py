@@ -21,7 +21,7 @@ print("app" in happy)
 
 
 
-# This functionality works like the JavaScript includes() method for both arrays and strings 
+# This functionality works like the JavaScript includes() method for both arrays and strings
 
 if "app" in happy:
   print("String present")
@@ -66,6 +66,31 @@ print(txt3)
 
 
 
+# Literal string interpolation through f-strings
+# Python 3.6 added new string interpolation method called literal string interpolation and introduced a new literal prefix f. This new way of formatting strings is powerful and easy to use. It provides access to embedded Python expressions inside string constants.
+
+f = bool(True)
+
+s = f'This is a {f} example of literal string interpolation though the f-string in Python'
+
+print(s)
+
+
+a = f'You can also use literal string interpolation through the f-string to show arithmetic operations: {4*2}'
+
+print(a)
+
+pb = "Jif peanut butter is the best, bar "
+n = None
+
+v = f'In fact, you can use f-strings to use interpolation with any variable/s: {pb}{n}'
+
+print(v)
+
+# Note: In the above example, {pb, n} would create a tuple
+
+
+
 # split()
 
 a = "Hello, World!"
@@ -81,10 +106,10 @@ print(a)
 
 a_no_cast = "His name is Dave and his age is " + 34
 
-""" 
+"""
 const a = "My age is " + 34;
 
-console.log(a); 
+console.log(a);
 """
 
 while x<12:
@@ -95,4 +120,3 @@ while x<12:
   print(x)
   # if x == 11:
   #   break
-  
