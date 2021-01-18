@@ -1,6 +1,8 @@
 # The return value of a method invocation that results in mutating a data structure is None
 
-#Debugging in Python: put this code where you want to set a breakpoint for the debugging. You would put it in the same place you would put debugger in Chrome Dev Console for JS:
+# As with JS, single quotes and double quotes are interchangeable
+
+# #Debugging in Python: put this code where you want to set a breakpoint for the debugging. You would put it in the same place you would put debugger in Chrome Dev Console for JS:
 
       # import pdb; pdb.set_trace()
 
@@ -11,6 +13,8 @@
 
 #This is a single-line comment. Python doesn't have multi-line comments per se,
 # but you can use a multi-line string (three quotation marks before and after comment)
+
+# Methods such as keys() and values() with dict result in what is called views ... lists of values that show what a data structure contains but which are just copies and cannot be manipulated to change the original data structure
 
 
 """

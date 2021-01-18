@@ -71,7 +71,7 @@ print(txt3)
 
 f = bool(True)
 
-s = f'This is a {f} example of literal string interpolation though the f-string in Python'
+s = f"This is a {f} example of literal string interpolation though the f-string in Python"
 
 print(s)
 
