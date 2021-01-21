@@ -148,3 +148,97 @@ checkifkeyexists("kumquat")
 
 
 # iterating over tuples practice ???
+
+
+# Iterators
+
+# An iterator is an object that contains a countable number of values.
+
+# An iterator is an object that can be iterated upon, meaning that you can traverse through all the values.
+
+# Technically, in Python, an iterator is an object which implements the iterator protocol, which consist of the methods __iter__() and __next__().
+
+# Iterator vs Iterable:
+
+# Lists, tuples, dictionaries, and sets are all iterable objects. They are iterable containers which you can get an iterator from. All these objects have a iter() method which is used to get an iterator
+
+s = set(( "dog", "cat", "bird" ))
+
+print(s)
+
+s_it = iter(s)
+
+print(next(s_it))
+print(next(s_it))
+print(next(s_it))
+
+# Strings are also iterable objects, containing a sequence of characters
+
+h = "hello"
+
+h_it = iter(h)
+
+print(next(h_it))
+print(next(h_it))
+print(next(h_it))
+print(next(h_it))
+print(next(h_it))
+
+# The relationshipo between a loop and an iterator: The for loop actually creates an iterator object and executes the next() method for each loop.
+
+# The __iter__() method acts similar, you can do operations (initializing etc.), but must always return the iterator object itself.
+
+# Challenge example: Create an iterator that returns numbers, starting with 1, and each sequence will increase by one (returning 1,2,3,4,5 etc.):
+
+class AdderUpper:
+  def __iter__(self):
+    self.num = 0
+    return self
+
+  def __next__(self):
+    x = self.num
+    self.num += 1
+    return x
+
+adds = AdderUpper()
+
+adds_it = iter(adds)
+
+print(next(adds_it))
+print(next(adds_it))
+print(next(adds_it))
+print(next(adds_it))
+print(next(adds_it))
+print(next(adds_it))
+print(next(adds_it))
+
+
+# To prevent the iteration from going on forever, we can use the StopIteration statement.
+
+# In the __next__() method, we can add a terminating condition to raise an error if the iteration is done a specified number of times:
+
+
+class AdderUpper:
+  def __iter__(self):
+    self.num = 0
+    return self
+
+  def __next__(self):
+    if self.num <= 4:
+      x = self.num
+      self.num += 1
+      return x
+    else:
+      raise StopIteration
+
+adds = AdderUpper()
+
+adds_it = iter(adds)
+
+print(next(adds_it))
+print(next(adds_it))
+print(next(adds_it))
+print(next(adds_it))
+print(next(adds_it))
+print(next(adds_it))
+print(next(adds_it))
