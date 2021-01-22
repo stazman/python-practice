@@ -46,7 +46,7 @@ createdate()
 
 # Math
 
-# Like JS, Python has built-in math methods (though in JS, the methods are called on the built-in Math class directly):
+# Like JS, Python has built-in math methods (though in JS, the methods are called on the built-in Math object directly):
 
 
 minnum = min(12, 14, 2)
@@ -86,3 +86,29 @@ print(simplypi)
 
 
 # Math module reference: https://www.w3schools.com/python/module_math.asp
+
+
+# JSON
+
+# Python has a built-in package called json, which can be used to work with JSON data.
+
+# Parsing JSON (Converting from JSON to Python)(similar to the built-in object JSON's .parse() method in JS)
+
+# If you have a JSON string, you can parse it by using the json.loads() method. The result will be a Python dictionary.
+
+import json
+
+samplejsonstring = '{ "name": "Joe", "position": "president" }'
+
+# Note: the interpreter expects property names to be in double quotes, not single quotes, specifically, and using single quotes will result in a JSONDecodeError
+
+print(samplejsonstring)
+
+x = json.loads(samplejsonstring)
+print(x)
+
+print(x["name"])
+
+# Converting from Python to JSON: If you have a Python object, you can convert it into a JSON string by using the json.dumps() method. (similar to the built-in object JSON's .stringify() method in JS)
+
+
