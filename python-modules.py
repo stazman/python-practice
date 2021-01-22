@@ -21,7 +21,10 @@ print(pm2.personobject["name"])
 
 # Built-in modules are written in C and integrated with the Python interpreter. Each built-in module contains resources for certain system-specific functionalities such as OS management, disk IO, etc. The standard library also contains many Python scripts (with the .py extension) containing useful utilities.
 
-# To display a list of all available modules, use the following command in the Python console: >>> help("modules")
+# List of built-in modules: https://www.w3schools.com/python/python_ref_functions.asp
+
+
+# To display a list of all available predefined (requiring import keyword) modules, use the following command in the Python console: >>> help("modules")
 
 # Predefined modules in libraries from Python distributions that require the import keyword: https://docs.python.org/3/py-modindex.html
 
