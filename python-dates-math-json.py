@@ -42,3 +42,47 @@ def createdate():
   print(y.tzinfo)
 
 createdate()
+
+
+# Math
+
+# Like JS, Python has built-in math methods (though in JS, the methods are called on the built-in Math class directly):
+
+
+minnum = min(12, 14, 2)
+print(minnum)
+
+maxnum = max(12, 14, 2)
+print(maxnum)
+
+absnum = abs(-6.345)
+print(absnum)
+
+exponum = pow(2, 4)
+print(exponum)
+
+roundup = round(7.9)
+print("\"Normal\" rounding up: " + str(roundup))
+
+
+# In Python, a separate module called math is required for some functions (that JS doesn't require a separate module for)
+
+import math
+
+roundnumupinanycase = math.ceil(7.1)
+print(roundnumupinanycase)
+
+roundnumdowninanycase = math.floor(7.9)
+print(roundnumdowninanycase)
+
+squarerootof64 = math.sqrt(64)
+print(squarerootof64)
+
+simplypi = math.pi
+
+# Note that pi has no invocation operator (parentheses) because it is a constant
+
+print(simplypi)
+
+
+# Math module reference: https://www.w3schools.com/python/module_math.asp
