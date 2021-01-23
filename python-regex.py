@@ -16,8 +16,21 @@ y = re.search("\d", textwithnumbers)
 xreturningstring = re.search("^There", textwithoutnumbers)
 nooccurrences = re.search("heliotropic", textwithoutnumbers)
 
-print(bool(x))
-print(bool(y))
+print(bool(x)) # returns True
+print(bool(y)) # returns False
+
+# More extensive example:
+article = "We should all be so lucky as to come from fun parents. My parents were fun, and we always had a good time."
+
+grammarsearch = re.search('\d', article)
+print(grammarsearch)
+print(bool(grammarsearch)) # There are no digits in the sentence, so the boolean value is False
+
+
+grammarsearch2 = re.search("lucky", article) # There is an occurrence of the string "lucky" in the sentence, so the boolean value is True
+
+print(grammarsearch2)
+print(bool(grammarsearch2))
 
 print(xreturningstring)
 print(nooccurrences)
