@@ -48,9 +48,59 @@ nomatches = re.findall("syzygy", textwithnumbers)
 print(nomatches)
 
 
+# .split
+
+print(re.split("\s", txt))
 
 
+# You can control the number of occurrences by specifying the maxsplit parameter
 
+print(re.split("\s", txt, 2))
+
+
+# sub()
+
+# Think of sub as short for substitute
+
+# The sub() function replaces the matches with the text of your choice
+
+subbedstring = re.sub("Spain", "Portugal", txt)
+print(subbedstring)
+
+# You can control the number of replacements by specifying the count parameter:
+
+subbedwithones = re.sub("i", "1", txt, 1)
+print(subbedwithones)
+
+
+# Match Object
+
+# A Match Object is an object containing information about the search and the result. If there is no match, the value None will be returned, instead of the Match Object.
+
+print(xreturningstring) # --> <re.Match object; span=(0, 5), match='There'>
+
+# The Match object has properties and methods used to retrieve information about the search, and the result:
+
+# .span() returns a tuple containing the start-, and end positions of the match.
+# .string returns the string passed into the function
+# .group() returns the part of the string where there was a match
+
+# span()
+
+print(xreturningstring.span())
+
+print(xreturningstring.string)
+
+# but string() won't return the string if there are no matches in the regex expression:
+
+# phrase = "This is a phrase"
+# nomatch = re.search("salubrious", phrase)
+# print(nomatch.string)
+
+
+# group() prints the distinct part of the string where there was a match.
+
+print(xreturningstring.group())
 
 
 ##### General Regex Reference #####

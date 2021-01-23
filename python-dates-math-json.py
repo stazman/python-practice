@@ -46,7 +46,7 @@ createdate()
 
 # Math
 
-# Like JS, Python has built-in math methods (though in JS, the methods are called on the built-in Math object directly):
+# Like JS, Python has built-in math methods (though in JS, the methods are called on the built-in Math object explicity, eg., const absNum = Math.abs(-1.3)):
 
 
 minnum = min(12, 14, 2)
@@ -90,7 +90,7 @@ print(simplypi)
 
 # JSON
 
-# Python has a built-in package called json, which can be used to work with JSON data.
+# Python has a predefined package called json, which can be used to work with JSON data.
 
 # Parsing JSON (Converting from JSON to Python)(similar to the built-in object JSON's .parse() method in JS)
 
