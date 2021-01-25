@@ -1,6 +1,6 @@
-# Note: You'll need to create the directory ./sample_empty_dir from the project root directory to try out the removing empty directory steps later in this file; empty directories aren't checked into version control
+# Note: If you run this file, you'll need to create the directory ./sample_empty_dir from the project root directory to try out the removing empty directory steps later in this file; empty directories aren't checked into version control
 
-# IMPT: 
+# IMPT:
     # A file must be opened before it can be read, written to, or deleted from the command line
     # Best practice is that a file should be closed if not needed to be used anymore
 
@@ -137,7 +137,7 @@ read_new_file_not_already_exists.close()
   # create_new_file_but_exists.write("This is a file whose creation and writing to with \"x\" is being attempted, but it will fail because it already exists. The existing file with the same name will not be overwritten.")
   # create_new_file_but_exists.close()
 
-# so it won't continue to be readable in the same series of invocations
+# (so it won't continue to be readable in the same series of invocations when running this file)
 
   # create_new_file_but_exists = open("./sample_files/sample_text_file_5.txt", "r")
   # create_new_file_but_exists.read()
@@ -171,7 +171,7 @@ else:
 
 # To delete a directory
 
-# Note: A directory deleted this way must be empty. Otherwise this doesn't work and you'll get an error.) 
+# Note: A directory deleted this way must be empty. Otherwise this doesn't work and you'll get an error.)
 
 # (You'll need to comment out the previous four sections to see this work correctly):
 

@@ -26,8 +26,9 @@ print(bool(""))
 print(bool(None))
 
 
-# Different than JavaScript which as them as true
+# Different than JavaScript, which evaluates them as true
 
+print("\nFalsey collections: \n")
 print(bool(()))
 print(bool([]))
 print(bool({}))
