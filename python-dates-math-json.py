@@ -14,11 +14,21 @@ def datetimeyear():
   x = datetime.datetime.now()
   print(datetime.datetime.now().year)
   print(x.year)
-  print(x.strftime("%A"))
+  print("Today is " + x.strftime("%A"))
 
 datetimeyear()
 
+
+def lastbirthday():
+  z = datetime.datetime(2020, 10, 3, 8, 23)
+  aa = z.strftime("%A, %B %-d, %Y, at %-H:%-M %p.")
+  bb = "My birthday last year was " + aa
+  print(bb)
+
+lastbirthday()
+
 # strftime formatting directives reference: https://strftime.org/
+
 
 
 # Creating Date Objects
@@ -116,6 +126,7 @@ petobject = {
   "age": 2
 }
 
+print(type(petobject))
 pythontojson = json.dumps(petobject)
 print(pythontojson)
 print(type(pythontojson))
@@ -147,6 +158,7 @@ print(type(pythontojson))
 
 print(json.dumps({"name": "John", "age": 30}))
 print(json.dumps(["apple", "bananas"]))
+print(type(json.dumps(["apple", "bananas"])))
 print(json.dumps(("apple", "bananas")))
 print(json.dumps("hello"))
 print(json.dumps(42))
@@ -175,7 +187,7 @@ print(json.dumps(x))
 print("\nWith custom indenting: \n" + json.dumps(x, indent=4))
 
 
-# You can also define the separators, default value is (", ", ": "), which means using a comma and a space to separate each object, and a colon and a space to separate keys from values. You can make custom values, using the separators parameter to change the default separator.
+# You can also define custom separators, default value is (", ", ": "), which means using a comma and a space to separate each object, and a colon and a space to separate keys from values. You can make custom values, using the separators parameter to change the default separator.
 
 print("\nWith custom separators: \n" + json.dumps(x, indent=4, separators=(". ", " = ")))
 
