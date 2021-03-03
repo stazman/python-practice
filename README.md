@@ -1,1 +1,1 @@
-This is a repo to keep track of my learning of/practice with Python.
+Practice with Python for learning and teaching purposes
